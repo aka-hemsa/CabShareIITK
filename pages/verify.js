@@ -77,8 +77,10 @@ export default function Verify() {
           isClosable: true,
         });
 
-        // Redirect to the home page
-        router.push("/"); // Redirect to home page
+        // Redirect to the home page and reload it
+        router.push("/").then(() => {
+          window.location.reload(); // Reload the page
+        });
 
       } catch (err) {
         console.error("Verification error:", err);
