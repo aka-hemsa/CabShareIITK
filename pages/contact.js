@@ -2,7 +2,7 @@ import { Box, Container, Heading, Text, VStack } from "@chakra-ui/react";
 
 export default function ContactPage() {
   return (
-    <Container maxW="3xl" py={10}>
+    <Container maxW="3xl" py={10} minHeight="80vh">
       <Heading as="h1" size="xl" mb={6}>
         Contact Us
       </Heading>
