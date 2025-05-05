@@ -222,19 +222,19 @@ const ListingDay = ({ date }) => {
 
         const now = new Date();
 
-// Filter out past trips and sort upcoming ones
-const upcomingSorted = enrichedListings
-  .filter((listing) => {
-    const dateTime = new Date(`${listing.date}T${listing.time}`);
-    return dateTime >= now;
-  })
-  .sort((a, b) => {
-    const aDate = new Date(`${a.date}T${a.time}`);
-    const bDate = new Date(`${b.date}T${b.time}`);
-    return aDate - bDate;
-  });
+          // Filter out past trips and sort upcoming ones
+          const upcomingSorted = enrichedListings
+            .filter((listing) => {
+              const dateTime = new Date(`${listing.date}T${listing.time}`);
+              return dateTime >= now;
+            })
+            .sort((a, b) => {
+              const aDate = new Date(`${a.date}T${a.time}`);
+              const bDate = new Date(`${b.date}T${b.time}`);
+              return aDate - bDate;
+            });
 
-setListings(upcomingSorted);
+          setListings(upcomingSorted);
 
         setLoading(false);
       });
